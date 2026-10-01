@@ -75,6 +75,15 @@ Read before any work:
   under `fixtures/synthetic-game/`; the real snapshot is built locally into the
   gitignored `fixtures/vanilla-snapshot/` by `cargo run -p progenitor-game -- snapshot`.
 
+## Agent team
+
+Development runs as an agent loop. `docs/STATE.md` is the shared memory; the `/next`
+skill is the orchestrator; `.claude/agents/` defines the roles: `rust-implementer`,
+`rust-implementer-fast`, `ui-implementer`, `game-files-specialist`, `reviewer`,
+`verifier`. Only the orchestrator writes STATE and commits. Every implementer task is
+followed by the reviewer and the verifier. Phase boundaries and anything that needs the
+game running stop for the human (`/phase-review`).
+
 ## Working agreements
 
 - Work phase by phase as `docs/plan.md` lays out; do not start a phase before the
