@@ -1,0 +1,12 @@
+[package]
+name = "progenitor-mod"
+description = "Mod pipeline: validate, export, assemble, localization fan-out, deploy, ck3-tiger runner"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[dependencies]
+progenitor-core = { workspace = true }
+progenitor-game = { workspace = true }
+progenitor-content = { workspace = true }

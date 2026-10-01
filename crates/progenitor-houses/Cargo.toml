@@ -1,0 +1,13 @@
+[package]
+name = "progenitor-houses"
+description = "House entity, implicit dynasty, cadet split, commands, exporter, page"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[dependencies]
+progenitor-core = { workspace = true }
+progenitor-content = { workspace = true }
+progenitor-coa = { workspace = true }
+progenitor-ui = { workspace = true }

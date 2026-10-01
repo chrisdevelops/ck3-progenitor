@@ -1,0 +1,11 @@
+[package]
+name = "progenitor-agent"
+description = "Agent loop, tool derivation from the registry, ask_user, confirmation"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[dependencies]
+progenitor-core = { workspace = true }
+progenitor-llm = { workspace = true }

@@ -1,0 +1,12 @@
+[package]
+name = "progenitor-chat"
+description = "Chat page over the agent loop"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[dependencies]
+progenitor-core = { workspace = true }
+progenitor-agent = { workspace = true }
+progenitor-ui = { workspace = true }

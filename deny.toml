@@ -1,0 +1,14 @@
+# cargo-deny configuration. Licenses: permissive only. GPL code (ck3-tiger) stays an
+# external subprocess and must never appear in the dependency graph.
+[licenses]
+allow = ["Apache-2.0", "MIT", "BSD-2-Clause", "BSD-3-Clause", "ISC", "Zlib", "Unicode-3.0", "Unicode-DFS-2016", "MPL-2.0", "CC0-1.0", "OpenSSL", "BSL-1.0"]
+
+[bans]
+multiple-versions = "warn"
+deny = [
+  { name = "tiger-lib", reason = "GPL-3.0; run ck3-tiger as a subprocess instead" },
+  { name = "ck3-tiger", reason = "GPL-3.0; run as a subprocess instead" },
+]
+
+[advisories]
+yanked = "deny"

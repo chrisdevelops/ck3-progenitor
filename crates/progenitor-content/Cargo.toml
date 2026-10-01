@@ -1,0 +1,11 @@
+[package]
+name = "progenitor-content"
+description = "Vanilla and DLC content source: cultures, faiths, titles at a date, traits, genes, governments, DLC flags"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[dependencies]
+progenitor-core = { workspace = true }
+progenitor-game = { workspace = true }

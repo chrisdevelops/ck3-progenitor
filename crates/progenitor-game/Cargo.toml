@@ -1,0 +1,10 @@
+[package]
+name = "progenitor-game"
+description = "Install detection, version and DLC, Clausewitz reader (jomini) and byte-exact writer, SQLite index of the installed game"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[dependencies]
+progenitor-core = { workspace = true }

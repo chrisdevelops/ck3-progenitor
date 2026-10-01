@@ -1,0 +1,10 @@
+[package]
+name = "progenitor-dna"
+description = "Gene model, slider-to-gene mapping, Copy DNA and dna_data codecs (pure Rust)"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[dependencies]
+progenitor-core = { workspace = true }

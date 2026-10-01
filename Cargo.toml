@@ -1,0 +1,78 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/progenitor-core",
+    "crates/progenitor-game",
+    "crates/progenitor-content",
+    "crates/progenitor-points",
+    "crates/progenitor-dna",
+    "crates/progenitor-coa",
+    "crates/progenitor-ui",
+    "crates/progenitor-llm",
+    "crates/progenitor-agent",
+    "crates/progenitor-characters",
+    "crates/progenitor-houses",
+    "crates/progenitor-collections",
+    "crates/progenitor-generators",
+    "crates/progenitor-chat",
+    "crates/progenitor-mod",
+    "crates/progenitor-app",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+license = "Apache-2.0"
+repository = "https://github.com/chrisdevelops/ck3-progenitor"
+
+[workspace.dependencies]
+# Internal crates. Dependency direction follows the layer map in docs/plan.md.
+progenitor-core = { path = "crates/progenitor-core" }
+progenitor-game = { path = "crates/progenitor-game" }
+progenitor-content = { path = "crates/progenitor-content" }
+progenitor-points = { path = "crates/progenitor-points" }
+progenitor-dna = { path = "crates/progenitor-dna" }
+progenitor-coa = { path = "crates/progenitor-coa" }
+progenitor-ui = { path = "crates/progenitor-ui" }
+progenitor-llm = { path = "crates/progenitor-llm" }
+progenitor-agent = { path = "crates/progenitor-agent" }
+progenitor-characters = { path = "crates/progenitor-characters" }
+progenitor-houses = { path = "crates/progenitor-houses" }
+progenitor-collections = { path = "crates/progenitor-collections" }
+progenitor-generators = { path = "crates/progenitor-generators" }
+progenitor-chat = { path = "crates/progenitor-chat" }
+progenitor-mod = { path = "crates/progenitor-mod" }
+progenitor-app = { path = "crates/progenitor-app" }
+
+# UI. gpui-component 0.7 pins gpui-pre 0.3.7 under the name `gpui`; we depend on the
+# same package and version so the two never drift. Upgrade both together.
+gpui = { package = "gpui-pre", version = "=0.3.7" }
+gpui-component = "0.7.0"
+
+# Game files
+jomini = "0.37"
+rusqlite = { version = "0.32", features = ["bundled"] }
+
+# Serialization and schemas
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+schemars = "0.8"
+
+# Errors, ids, time
+thiserror = "2"
+anyhow = "1"
+ulid = "1"
+
+# Async and HTTP (LLM providers)
+tokio = { version = "1", features = ["rt-multi-thread", "macros", "sync", "time"] }
+reqwest = { version = "0.12", default-features = false, features = ["json", "stream", "rustls-tls"] }
+futures = "0.3"
+
+# Secrets
+keyring = "3"
+
+[profile.dev]
+opt-level = 1
+
+[profile.dev.package."*"]
+opt-level = 2

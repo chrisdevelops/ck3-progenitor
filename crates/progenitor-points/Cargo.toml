@@ -1,0 +1,10 @@
+[package]
+name = "progenitor-points"
+description = "The Ruler Designer point formula (pure Rust)"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[dependencies]
+progenitor-core = { workspace = true }

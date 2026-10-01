@@ -1,0 +1,9 @@
+[package]
+name = "progenitor-core"
+description = "Registry, extension-point traits, command bus with undo, events, jobs, storage, draft state"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[dependencies]

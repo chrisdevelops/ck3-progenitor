@@ -1,0 +1,21 @@
+[package]
+name = "progenitor-app"
+description = "The binary: opens the window, bootstraps the registry, loads every plugin"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[dependencies]
+progenitor-core = { workspace = true }
+progenitor-game = { workspace = true }
+progenitor-content = { workspace = true }
+progenitor-ui = { workspace = true }
+progenitor-characters = { workspace = true }
+progenitor-houses = { workspace = true }
+progenitor-collections = { workspace = true }
+progenitor-generators = { workspace = true }
+progenitor-chat = { workspace = true }
+progenitor-mod = { workspace = true }
+progenitor-llm = { workspace = true }
+progenitor-agent = { workspace = true }

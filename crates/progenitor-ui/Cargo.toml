@@ -1,0 +1,10 @@
+[package]
+name = "progenitor-ui"
+description = "gpui-component wrapper, app components, schema-driven form, field editors"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[dependencies]
+progenitor-core = { workspace = true }

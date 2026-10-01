@@ -1,0 +1,6 @@
+/target
+# Paradox's files are not redistributable; the real snapshot is built locally.
+/fixtures/vanilla-snapshot/
+/docs/phase0/private/
+*.log
+.DS_Store
